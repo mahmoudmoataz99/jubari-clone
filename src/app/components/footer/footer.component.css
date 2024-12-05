@@ -1,0 +1,18 @@
+footer {
+  background-color: #2e2766;
+}
+
+a {
+  margin: 0px;
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  color: gray;
+}
+
+ul li {
+    list-style-type: none;
+  padding: 5px 0px;
+}
