@@ -1,48 +1,65 @@
+<nav class="navbar navbar-expand-lg p-0"
+  style="
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('https://jubari.net/build/assets/sky-bg.6716ff2f.jpg');
+  ">
+    <a class="navbar-brand p-3 mx-0"  routerLink="">
+      <img
+        src="https://jubari.net/media/602/logo-color.svg"
+        width="200"
+        height="120"
+        class="navphoto d-inline-block align-top"
+        alt=""
+      />
+    </a>
 
-      <div class="container">
-        <nav class="navbar container navbar-expand-lg border border-3 rounded rounded-4 p-0 my-3 position-absolute">
-            <a class="navbar-brand p-3 mx-0" style="background-color:#3fbaf1;" href="#">
-                <img src="https://jubari.net/media/602/logo-color.svg" width="200" height="120" class="navphoto d-inline-block align-top" alt="">
-            </a>
-        
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="w-100 px-3" id="navbarNavAltMarkup">
-                <!-- top-nav  -->
-                <div class="d-flex w-100 justify-content-between align-middle align-items-center">
-                    <div class="d-flex justify-content-around w-25 fs-5">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-x-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
-                        <i class="fa-brands fa-pinterest"></i>
-                    </div>
-                    <div class="d-flex align-middle gap-3 mt-3 align-items-center">
-                        <div class="d-flex gap-2 fs-5">
-                            <i class="fa-brands mt-1 fa-whatsapp"></i>
-                            <p class="">+967772220300</p>
-                        </div>
-                        <div class="d-flex gap-2 fs-5">
-                            <i class="fa-solid mt-1 fa-language"></i>
-                            <p class="">English</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- bottom nav  -->
-                <div class="d-flex w-100 justify-content-around">
-                    <a class="nav-item nav-link" routerLink="/">الرئيسية</a>
-                    <a class="nav-item nav-link" routerLink="/about">من نحن</a>
-                    <a class="nav-item nav-link" routerLink="/about">خدماتنا</a>
-                    <a class="nav-item nav-link" href="#">الوجهات السياحية</a>
-                    <a class="nav-item nav-link" href="#">العرض و الباقات</a>
-                    <a class="nav-item nav-link" href="#">الفنادق</a>
-                    <a class="nav-item nav-link" href="#">مقالات</a>
-                    <a class="nav-item nav-link" href="#">تواصل معنا</a>
-                </div>
-            </div>
-        </nav>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="w-100 px-3" id="navbarNavAltMarkup">
+      <!-- top-nav  -->
+      <div class="d-flex w-100 justify-content-between align-middle align-items-center">
+        <div class="d-flex justify-content-around w-25 fs-5">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </div>
+        <div class="d-flex align-middle gap-3 mt-3 align-items-center">
+          <div class="d-flex gap-2 fs-5">
+            <i class="fa-brands mt-1 fa-whatsapp"></i>
+            <p class="">+967772220300</p>
+          </div>
+          <div class="d-flex gap-2 fs-5">
+            <i class="fa-solid mt-1 fa-language"></i>
+            <p class="">English</p>
+          </div>
+        </div>
       </div>
+      <div style="border-top: 1px solid #000;" class="mb-3" ></div>
+      <!-- bottom nav  -->
+      <div class="d-flex w-100 justify-content-around">
+        <a routerLink="" class="nav-item nav-link">الرئيسية</a>
+        <a routerLink="/about" class="nav-item nav-link">من نحن</a>
+        <a routerLink="/services" class="nav-item nav-link">خدماتنا</a>
+        <a routerLink="/destinations" class="nav-item nav-link">الوجهات السياحية</a>
+        <a routerLink="/offers" class="nav-item nav-link">العرض و الباقات</a>
+        <a routerLink="/hotels" class="nav-item nav-link">الفنادق</a>
+        <a routerLink="/articles" class="nav-item nav-link">مقالات</a>
+        <a routerLink="/contact" class="nav-item nav-link">تواصل معنا</a>
+      </div>
+    </div>
+</nav>
