@@ -7,16 +7,6 @@
     height: auto;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1; /* Ensure overlay is above the image but below the text */
-}
-
 .card-body {
     z-index: 2; /* Ensure the text is above the overlay */
     display: flex; /* Use flexbox to align content horizontally */
