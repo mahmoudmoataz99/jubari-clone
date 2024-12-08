@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-item',
   standalone: true,
@@ -8,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './item.component.css'
 })
 export class ItemComponent {
-
+  @Input() title?: string;
+  @Input() imageUrl?: string;
+  @Input() link?: string;
 }

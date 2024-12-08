@@ -6,14 +6,9 @@
       
       <div>
         <div class="row g-4 my-4">
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
-          <app-item class="col-lg-3 col-md-6"></app-item>
+          @for (item of appItems; track item.title) {
+            <app-item [title]="item.title" [imageUrl]="item.imageUrl" [link]="item.link" class="col-lg-3 col-md-6"></app-item>
+          }
         </div>
       </div>
 </section>
