@@ -10,7 +10,7 @@
       من إصدار التأشيرات وحجز تذاكر السفر، وصولًا لخدمات النقل المحلي والدولي،
       جُباري معك خطوة بخطوة إلى أن نتأكد أنك راضٍ، وبأمان
     </h5>
-    <app-home-slider></app-home-slider>
+    <app-home-slider class="container"></app-home-slider>
   </section>
   
   <section class="py-5 gap-3 container text-center">
@@ -25,44 +25,19 @@
     </p>
 
     <article class="w-100 row container">
-      <div class="col-6 p-2">
-        <a href="https://jubari.net/ar/services/2" class="card text-decoration-none position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/223/socotra-testata-pozzi-1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-          <div class="overlay rounded rounded-4"></div> <!-- Overlay for darkening effect -->
+      <div class="col-6 p-2" *ngFor="let place of places">
+        <a [href]="place.link" class="card text-decoration-none position-relative rounded rounded-4"
+          style="height: 250px; background-image: url('{{place.imageUrl}}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+          <div class="overlay rounded rounded-4"></div>
           <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-            <h4 class="card-title" style="z-index: 2;">جزيرة سقطرى</h4>
-          </div>
-        </a>
-      </div>
-    
-      <div class="col-6 p-2">
-        <a href="https://jubari.net/ar/services/2" class="card text-decoration-none position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/30/Frame-134032.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-          <div class="overlay rounded rounded-4"></div> <!-- Overlay for darkening effect -->
-          <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-            <h4 class="card-title" style="z-index: 2;">دبى</h4>
-          </div>
-        </a>
-      </div>
-    
-      <div class="col-6 p-2">
-        <a href="https://jubari.net/ar/services/2" class="card text-decoration-none position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/31/Frame-134033.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-          <div class="overlay rounded rounded-4"></div> <!-- Overlay for darkening effect -->
-          <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-            <h4 class="card-title" style="z-index: 2;">ماليزيا</h4>
-          </div>
-        </a>
-      </div>
-    
-      <div class="col-6 p-2">
-        <a href="https://jubari.net/ar/services/2" class="card text-decoration-none position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/31/Frame-134033.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-          <div class="overlay rounded rounded-4"></div> <!-- Overlay for darkening effect -->
-          <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-            <h4 class="card-title" style="z-index: 2;">شرم الشيخ</h4>
+            <h4 class="card-title" style="z-index: 2;">{{ place.title }}</h4>
           </div>
         </a>
       </div>
     </article>
+
     
     
-    <button class="btn btn-outline-primary my-3">إكتشف المزيد</button>
+    <a RouterLink="/destinations" class="btn btn-outline-primary my-3">إكتشف المزيد</a>
   </section>
 </main>
