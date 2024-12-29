@@ -10,7 +10,7 @@
 
     <article class="w-100 row container">
       <div class="col-12 col-md-6 p-2" *ngFor="let place of places">
-        <div class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('{{place.imageUrl}}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+        <div [routerLink]="['/destination',place.id]" class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('{{place.imageUrl}}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
           <div class="overlay rounded rounded-4"></div>
           <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
             <h4 class="card-title" style="z-index: 2;">{{ place.title }}</h4>

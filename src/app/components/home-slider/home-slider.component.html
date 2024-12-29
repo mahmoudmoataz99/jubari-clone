@@ -1,36 +1,9 @@
 <section class="d-flex justify-content-around g-3 w-100 my-2 py-2 overflow-y-hidden overflow-x-scroll">
-  <article class="col-xl-5 col-md-8 col-sm-9 col-7 p-2">
-    <div href="#" class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/892/ishan-seefromthesky-66Tu10CxYY0-unsplash.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-      <div class="overlay rounded rounded-4"></div> 
+  <article *ngFor="let card of cardsData" class="col-xl-5 col-md-8 col-sm-9 col-7 p-2">
+    <div [routerLink]="['/service',card.id]" class="card position-relative rounded-4" [ngStyle]="{'background-image': 'url(' + card.imageUrl + ')'}" style="height: 250px; background-repeat: no-repeat; background-position: center center; background-size: cover;">
+      <div class="overlay rounded-4"></div>
       <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-        <h4 class="card-title" style="z-index: 2;">الحج و العمرة</h4>
-      </div>
-    </div>
-  </article>
-  
-  <article class="col-xl-5 col-md-8 col-sm-9 col-7 p-2">
-    <div href="#" class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/884/convertkit-htQznS-Rx7w-unsplash.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-      <div class="overlay rounded rounded-4"></div> 
-      <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-        <h4 class="card-title" style="z-index: 2;">إستخراج التأشيرة</h4>
-      </div>
-    </div>
-  </article>
-  
-  <article class="col-xl-5 col-md-8 col-sm-9 col-7 p-2">
-    <div href="#" class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/860/image-10.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-      <div class="overlay rounded rounded-4"></div> 
-      <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-        <h4 class="card-title" style="z-index: 2;">حجز تذاكر طيران</h4>
-      </div>
-    </div>
-  </article>
-  
-  <article class="col-xl-5 col-md-8 col-sm-9 col-7 p-2">
-    <div href="#" class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('https://jubari.net/media/872/tim-depickere-5mp2mlab7ZM-unsplash.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
-      <div class="overlay rounded rounded-4"></div> 
-      <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
-        <h4 class="card-title" style="z-index: 2;">تأجير سيارات</h4>
+        <h4 class="card-title" style="z-index: 2;">{{ card.title }}</h4>
       </div>
     </div>
   </article>

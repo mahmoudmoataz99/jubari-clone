@@ -15,21 +15,25 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
   places = [
     {
+      id:1,
       title: 'جزيرة سقطرى',
       imageUrl: 'https://jubari.net/media/223/socotra-testata-pozzi-1.jpg',
       link: 'https://jubari.net/ar/services/2',
     },
     {
+      id:2,
       title: 'دبى',
       imageUrl: 'https://jubari.net/media/30/Frame-134032.jpg',
       link: 'https://jubari.net/ar/services/2',
     },
     {
+      id:3,
       title: 'ماليزيا',
       imageUrl: 'https://jubari.net/media/31/Frame-134033.jpg',
       link: 'https://jubari.net/ar/services/2',
     },
     {
+      id:4,
       title: 'شرم الشيخ',
       imageUrl: 'https://jubari.net/media/31/Frame-134033.jpg',
       link: 'https://jubari.net/ar/services/2',
