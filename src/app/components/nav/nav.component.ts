@@ -10,8 +10,6 @@ import { Router,RouterLink } from '@angular/router';
 })
 export class NavComponent implements OnInit {
   constructor(private router: Router) {}
-
   ngOnInit(): void {
   }
-
 }

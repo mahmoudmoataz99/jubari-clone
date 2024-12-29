@@ -2,13 +2,13 @@ i {
   color: rgba(121, 121, 121, 0.751);
 }
 i:hover {
-  color: rgba(73, 228, 230, 0.412);
+  color: var(--light-blue);
 }
 
 h2 {
-  color: #0868de;
+  color: var(--light-blue);
 }
 
 h3,h4 {
-  color: #2e2766;
+  color: var(--dark-blue);
 }

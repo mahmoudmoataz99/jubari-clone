@@ -1,65 +1,60 @@
-<nav class="navbar navbar-expand-lg p-0"
-  style="
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('https://jubari.net/build/assets/sky-bg.6716ff2f.jpg');
-  ">
-    <a class="navbar-brand p-3 mx-0"  routerLink="">
-      <img
-        src="https://jubari.net/media/602/logo-color.svg"
-        width="200"
-        height="120"
-        class="navphoto d-inline-block align-top"
-        alt=""
-      />
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="w-100 px-3 fw-bold" id="navbarNavAltMarkup">
-      <!-- top-nav  -->
-      <div class="d-flex w-100 justify-content-between align-middle align-items-center">
-        <div class="d-flex justify-content-around w-25 fs-5">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-          <i class="fa-brands fa-pinterest"></i>
-        </div>
-        <div class="d-flex align-middle gap-3 mt-3 align-items-center">
-          <div class="d-flex gap-2 fs-5">
-            <i class="fa-brands mt-1 fa-whatsapp"></i>
-            <p class="">+967772220300</p>
-          </div>
-          <div class="d-flex gap-2 fs-5">
-            <i class="fa-solid mt-1 fa-language"></i>
-            <p class="">English</p>
-          </div>
-        </div>
-      </div>
-      <div style="border-top: 1px solid #000;" class="mb-3" ></div>
-      <!-- bottom nav  -->
-      <div class="d-flex w-100 justify-content-around">
+<nav class="navbar navbar-expand-lg p-0 px-4" style="background-repeat: no-repeat; background-size: cover; background-position: center center;
+    background-image: url('https://jubari.net/build/assets/sky-bg.6716ff2f.jpg');">
+  <a class="navbar-brand p-3 py-0 mx-0" routerLink="">
+    <img src="https://jubari.net/media/602/logo-color.svg" style="width: 200px; height: 150px;" class="navphoto d-inline-block align-top"/>
+  </a>
+ 
+  <!-- Button to Toggle Both Top and Bottom Nav (For smaller screens) -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="w-100 px-5 fw-bold" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse w-100" id="navbarCollapse">
+      <!-- Bottom Nav (Main Links) -->
+      <div class="d-flex w-100 flex-xl-row flex-column justify-content-between">
         <a routerLink="" class="nav-item nav-link">الرئيسية</a>
         <a routerLink="/about" class="nav-item nav-link">من نحن</a>
         <a routerLink="/services" class="nav-item nav-link">خدماتنا</a>
         <a routerLink="/destinations" class="nav-item nav-link">الوجهات السياحية</a>
-        <a routerLink="/offers" class="nav-item nav-link">العرض و الباقات</a>
-        <a routerLink="/hotels" class="nav-item nav-link">الفنادق</a>
-        <a routerLink="/articles" class="nav-item nav-link">مقالات</a>
+        <a routerLink="/offers" class="nav-item nav-link">العروض</a>
         <a routerLink="/contact" class="nav-item nav-link">تواصل معنا</a>
       </div>
+      
+      <!-- Top Nav (Social Media & WhatsApp) -->
+      <div class="d-flex flex-column justify-content-center align-items-xl-end align-items-lg-end align-items-center column-gap-5 row-gap-3 w-100 mt-2" id="topNavLinks">
+        <div class="d-flex column-gap-4 justify-content-around fs-5">
+          <a href="https://www.facebook.com/jubaritravel" target="_blank">
+            <i class="fa-brands text-dark fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/jubaritravel" target="_blank">
+            <i class="fa-brands text-dark fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/jubaritravel" target="_blank">
+            <i class="fa-brands text-dark fa-x-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/@jubaritravel" target="_blank">
+            <i class="fa-brands text-dark fa-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/jubaritravel" target="_blank">
+            <i class="fa-brands text-dark fa-linkedin-in"></i>
+          </a>
+          <a href="https://pinterest.com" target="_blank">
+            <i class="fa-brands text-dark fa-pinterest"></i>
+          </a>
+        </div>
+
+        <div class="d-flex column-gap-3 align-items-center">
+          <a href="https://wa.me/+967772220300" target="_blank" class="d-flex column-gap-2 fs-5 text-dark text-decoration-none">
+            <i class="fa-brands mt-1 fa-whatsapp"></i>
+            <p class="fw-bold">+967772220300</p>
+          </a>
+          <div class="d-flex column-gap-2 fs-5">
+            <i class="fa-solid mt-1 fa-language"></i>
+            <p class="fw-bold">English</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </nav>

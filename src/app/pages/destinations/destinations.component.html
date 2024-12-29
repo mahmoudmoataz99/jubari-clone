@@ -1,17 +1,10 @@
-<!-- tourist-destinations.component.html -->
 <section class="container">
     <p class="my-4 text-center fs-5">
-      وكالة سياحة متخصصة تسعى لراحة العملاء وتوفير خدمات متنوعة في مجال السفر والسياحة.
+      اختر وجهتك السياحية المفضلة وتصفح العديد من العروض السياحية المميزة
     </p>
   
     <div class="row g-4 my-4">
-      <!-- Loop through the array of destinations and pass data to the app-item component -->
-      <app-item *ngFor="let item of destinations" 
-                [title]="item.title" 
-                [imageUrl]="item.imageUrl" 
-                [link]="item.link" 
-                class="col-lg-3 col-md-6">
+      <app-item loading="lazy" *ngFor="let item of destinations" [title]="item.title" [routerLink]="['/destination', item.id]"  [imageUrl]="item.imageUrl"  [link]="item.link"  class="col-lg-3 col-md-6">
       </app-item>
     </div>
   </section>
-  

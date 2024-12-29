@@ -7,7 +7,7 @@
       <div>
         <div class="row g-4 my-4">
           @for (item of appItems; track item.title) {
-            <app-item [title]="item.title" [imageUrl]="item.imageUrl" [link]="item.link" class="col-lg-3 col-md-6"></app-item>
+            <app-item loading="lazy" [title]="item.title" [routerLink]="['/service',item.id]" [imageUrl]="item.imageUrl" [link]="item.link" class="col-lg-3 col-md-6"></app-item>
           }
         </div>
       </div>

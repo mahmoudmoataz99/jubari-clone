@@ -1,0 +1,33 @@
+article {
+    transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -ms-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+}
+
+article:hover {
+    transform: skew(5deg);
+    animation: skw 0.8s ease-in-out infinite;
+    -webkit-animation: skw 0.8s ease-in-out infinite;
+    -webkit-transform: skew(5deg);
+    -moz-transform: skew(5deg);
+    -ms-transform: skew(5deg);
+    -o-transform: skew(5deg);
+}
+
+@keyframes skw {
+    0% {
+        transform: skew(5deg);
+        -webkit-transform: skew(5deg);
+        -moz-transform: skew(5deg);
+        -ms-transform: skew(5deg);
+        -o-transform: skew(5deg);
+}
+    50% {
+        transform: skew(-5deg);
+    }
+    100% {
+        transform: skew(5deg);
+    }
+}

@@ -1,43 +1,54 @@
 <main class="w-100">
   <app-hero></app-hero>
 
-  <section style="background-color: #3c31dd" class="text-white text-center py-5">
-    <p style=" backdrop-filter: blur(10px); background-color: rgba(245, 245, 245, 0.18);" class="p-2 border border-1 border-white rounded-pill">
-      نسعد بخدمتك
-    </p>
-    <h3 style="color: rgb(136, 213, 249)">نفهم إحتياجك و نلبيه!</h3>
-    <h5 class="w-50 fw-light">
-      من إصدار التأشيرات وحجز تذاكر السفر، وصولًا لخدمات النقل المحلي والدولي،
-      جُباري معك خطوة بخطوة إلى أن نتأكد أنك راضٍ، وبأمان
-    </h5>
-    <app-home-slider class="container"></app-home-slider>
-  </section>
-  
   <section class="py-5 gap-3 container text-center">
-    <p style=" backdrop-filter: blur(10px); background-color: #e1f2fd;" class="p-3 rounded-pill">
-      عش بسعادة
-    </p>
-    <h1 class="text-primary-emphasis">
-      أنت على بُعد خطوة من رحلة لا تُنسى
-    </h1>
-    <p>
-      نعرض لك باقات سياحية متعددة الوجهات، تجمع مابين السعر المنافس والجودة العالية
-    </p>
+    <p style="backdrop-filter: blur(10px); background-color: var(--light-blue);" class="p-3 rounded-pill">عش بسعادة</p>
+
+    <h1 class="text-primary-emphasis">أنت على بُعد خطوة من رحلة لا تُنسى</h1>
+
+    <p>نعرض لك باقات سياحية متعددة الوجهات، تجمع مابين السعر المنافس والجودة العالية</p>
 
     <article class="w-100 row container">
-      <div class="col-6 p-2" *ngFor="let place of places">
-        <a [href]="place.link" class="card text-decoration-none position-relative rounded rounded-4"
-          style="height: 250px; background-image: url('{{place.imageUrl}}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+      <div class="col-12 col-md-6 p-2" *ngFor="let place of places">
+        <div class="card position-relative rounded rounded-4" style="height: 250px; background-image: url('{{place.imageUrl}}'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
           <div class="overlay rounded rounded-4"></div>
           <div class="card-body text-center d-flex align-items-center justify-content-center text-white position-relative">
             <h4 class="card-title" style="z-index: 2;">{{ place.title }}</h4>
           </div>
-        </a>
+        </div>
       </div>
     </article>
-
-    
-    
-    <a RouterLink="/destinations" class="btn btn-outline-primary my-3">إكتشف المزيد</a>
+    <a routerLink="/destinations" class="btn btn-outline-info my-3">إكتشف المزيد</a>
   </section>
+  
+  <section style="background-image: linear-gradient(90deg,var(--dark-blue),#3c31dd)" class="text-white text-center py-5">
+    <p style="backdrop-filter: blur(10px); background-color: rgba(245, 245, 245, 0.18);" class="p-2 border border-1 border-white rounded-pill">
+      نسعد بخدمتك
+    </p>
+
+    <h3 style="color: rgb(136, 213, 249)">نفهم إحتياجك و نلبيه!</h3>
+
+    <h5 class="w-50 fw-light">من إصدار التأشيرات وحجز تذاكر السفر، وصولًا لخدمات النقل المحلي والدولي، جُباري معك خطوة بخطوة إلى أن نتأكد أنك راضٍ، وبأمان</h5>
+
+    <app-home-slider class="container"></app-home-slider>
+  </section>
+
+  <section class="py-3 w-100">
+    <h3 style="color:var(--dark-blue)" class="py-3">الأسئلة الشائعة</h3>
+    <div class="accordion w-75" id="accordionExample">
+      <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+        <h2 class="accordion-header" [id]="'heading' + i">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
+            <span class="accordion-text">{{ faq.question }}</span>
+          </button>
+        </h2>
+        <div [id]="'collapse' + i" class="accordion-collapse collapse"  aria-labelledby="'heading' + i" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 </main>

@@ -1,70 +1,55 @@
-<section class="container text-center bg-light my-3 py-3 rounded rounded-5">
-    <h2 class="my-4">لأي استفسار أو حجز يمكنكم التواصل معنا عبر الوسائل التالية
-    </h2>
+<main class="container text-center w-75 bg-light my-3 py-3 rounded rounded-5">
+  <h2 class="my-4">
+    لأي استفسار أو حجز يمكنكم التواصل معنا عبر الوسائل التالية
+  </h2>
 
-    <div class="gx-3 row">
-    <div class="col-xl-4 col-lg-6 col-md-12 py-3 rounded rounded-4 bg-body-secondary mb-4">
-        <h4 class="contact-data-title">رقم الواتساب</h4>
-        <a class="text-dark text-decoration-none" href="https://wa.me/+967772220300" target="_blank">
-            <p dir="ltr">
-                +967 77 222 0300
-            </p>
-        </a>
-    </div>
-    <div class="col-xl-4 col-lg-6 col-md-12 py-3 rounded rounded-4 bg-body-secondary mb-4">
-        <h4 class="contact-data-title">رقم الموبايل</h4>
-        <a class="text-dark text-decoration-none" href="tel:+967771122385">
-            <span dir="ltr">
-                +967 7711 22385
-            </span>
-        </a>
-    </div>
-    <div class="col-xl-4 col-lg-6 col-md-12 py-3 rounded rounded-4 bg-body-secondary mb-4">
-        <h4 class="contact-data-title">البريد الإلكتروني</h4>
-        <a class="text-dark text-decoration-none" href="mailto:Info@Jubaritravel.com">
-            <span dir="ltr">
-                Info&#64;Jubaritravel.com
-            </span>
-        </a>
-    </div>
-</div>
-    
-    <div class="p-3 my-3 rounded rounded-4 bg-body-secondary">
-      <h3 class="my-3">حساباتنا على مواقع التواصل</h3>
-      <div class="w-100 d-flex justify-content-center gap-4 fs-4 my-3">
-        <a href="https://www.facebook.com/jubaritravel" target="_blank">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/jubaritravel" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://twitter.com/jubaritravel" target="_blank">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.youtube.com/@jubaritravel" target="_blank">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/jubaritravel" target="_blank">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://pinterest.com" target="_blank">
-          <i class="fa-brands fa-pinterest"></i>
+  <article class="row my-4 row-gap-3">
+    <div *ngFor="let contact of contacts" class="col-xl-4 col-lg-6 col-md-12">
+      <div class="bg-body-secondary p-3 rounded rounded-4">
+        <h4 class="contact-data-title" >{{ contact.title }}</h4>
+        <a class="text-dark text-decoration-none" [href]="contact.link" target="_blank">
+          <p dir="ltr">{{ contact.number }}</p>
         </a>
       </div>
     </div>
-
-    <div class="p-3 my-3 rounded rounded-4 bg-body-secondary">
-      <h3>العنوان</h3>
-      <p>
-        أمام جامعة السعيدة شارع 45 منطقة السبعين - صنعاء - الجمهورية
-        اليمنية
-      </p>
+  </article>
+  
+  <article class="p-3 my-3 rounded rounded-4 bg-body-secondary">
+    <h3 class="my-3">حساباتنا على مواقع التواصل</h3>
+    <div class="w-100 d-flex justify-content-center gap-4 fs-4 my-3">
+      <a href="https://www.facebook.com/jubaritravel" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/jubaritravel" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/jubaritravel" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.youtube.com/@jubaritravel" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/jubaritravel" target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://pinterest.com" target="_blank">
+        <i class="fa-brands fa-pinterest"></i>
+      </a>
     </div>
+  </article>
 
-  <div class="map">
-    <h3>موقعنا علي الخريطة</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.8779595794595!2d44.2174445593563!3d15.328866038105012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603dae6302df783%3A0x376919bf522a1c38!2sJubari%20Travel%20%26%20Tourism!5e0!3m2!1sen!2s!4v1704046092764!5m2!1sen!2s"
-    style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  <article class="p-3 my-3 rounded rounded-4 bg-body-secondary">
+    <h3>العنوان</h3>
+    <a class="text-decoration-none text-dark" href="https://www.google.com/maps/dir//Jubari+Travel+%26+Tourism+45+Sana'a+Yemen/@15.3288764,44.2189466,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1603dae6302df783:0x376919bf522a1c38!2m2!1d44.2189466!2d15.3288764?entry=ttu&g_ep=EgoyMDI0MTIwMS4xIKXMDSoASAFQAw%3D%3D">
+      أمام جامعة السعيدة شارع 45 منطقة السبعين - صنعاء - الجمهورية اليمنية
+    </a>
+  </article>
+
+  <article class="mt-5">
+    <h2 class="my-4">موقعنا علي الخريطة</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.8779595794595!2d44.2174445593563!3d15.328866038105012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1603dae6302df783%3A0x376919bf522a1c38!2sJubari%20Travel%20%26%20Tourism!5e0!3m2!1sen!2s!4v1704046092764!5m2!1sen!2s"
+      style="border: 0; width: 80%; height: 300px;" loading="lazy" class="rounded rounded-4">
     </iframe>
-  </div>
-</section>
+  </article>
+</main>
