@@ -1,0 +1,19 @@
+/* Added styling for home-slider images */
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

@@ -1,9 +1,11 @@
-<div class="card position-relative rounded rounded-4">
-  <img [src]="imageUrl" class="card-img-top rounded rounded-4" />
+<div class="card service-card border-0 shadow-sm rounded-4 overflow-hidden">
 
-  <div class="overlay rounded rounded-4"></div>
+  <img [src]="imageUrl" class="card-img-top service-img" />
 
-  <div class="card-body text-center position-absolute top-50 start-50 translate-middle text-white">
-    <h4 class="card-title">{{ title }}</h4>
+  <div class="overlay"></div>
+
+  <div class="card-body text-center text-white service-content">
+    <h5 class="card-title fs-2 fw-bold mt-auto">{{ title }}</h5>
   </div>
+
 </div>

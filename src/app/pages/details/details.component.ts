@@ -1,30 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute,Router  } from '@angular/router';
-import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { NgIf } from '@angular/common';
+import { DataService } from '../../data/data.service';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './details.component.html',
-  styleUrl: './details.component.css'
+  styleUrl: './details.component.css',
 })
 export class DetailsComponent implements OnInit {
-  offer: any;
-  offerId?:any;
-  status:any;
+  details: any;
+  offerId?: any;
+  status: any;
 
-  constructor(private route: ActivatedRoute, private router:Router , private location: Location) {
-    const currentUrl = this.router.url;
-
-    const match = currentUrl.match(/\/([a-zA-Z]+)\/\d+$/);
-    if (match) {
-      const word = match[1];
-      this.status = word; 
-    } 
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+  ) {}
 
   ngOnInit(): void {
-    this.offerId = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id');
+    this.status = this.route.snapshot.routeConfig?.path?.split('/:')[0];
+
+    if (id) {
+      this.offerId = +id;
+
+      if (this.status === 'service') {
+        this.details = this.dataService.getServiceById(this.offerId);
+      } else if (this.status === 'destination') {
+        this.details = this.dataService.getDestinationById(this.offerId);
+      }
+    }
   }
 }

@@ -1,14 +1,22 @@
 <section class="container">
-    <p class="my-4 text-center fs-5">
-        وكالة سياحة متخصصة تسعى لراحة العملاء وتوفير خدمات متنوعة في مجال السفر
-        والسياحة.
-      </p>
-      
-      <div>
-        <div class="row g-4 my-4">
-          @for (item of appItems; track item.title) {
-            <app-item loading="lazy" [title]="item.title" [routerLink]="['/service',item.id]" [imageUrl]="item.imageUrl" [link]="item.link" class="col-lg-3 col-md-6"></app-item>
-          }
-        </div>
-      </div>
+  <p class="my-4 text-center fs-5">
+    وكالة سياحة متخصصة تسعى لراحة العملاء وتوفير خدمات متنوعة في مجال السفر
+    والسياحة.
+  </p>
+
+  <div>
+    <div class="row g-4 my-4">
+      @for (item of appItems; track item.title) {
+        <app-item
+          loading="lazy"
+          [title]="item.title"
+          [description]="item.description"
+          [routerLink]="['/service', item.id]"
+          [imageUrl]="item.imageUrl"
+          [link]="item.link"
+          class="col-lg-3 col-md-6"
+        ></app-item>
+      }
+    </div>
+  </div>
 </section>

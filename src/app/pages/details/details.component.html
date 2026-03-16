@@ -1,4 +1,43 @@
-<section class="container">
-    <h1 class="text-center my-4">هذه الصفحة من المفترض أن تحتوى على تفاصيل أكثر عن {{status}} رقم {{offerId}}</h1>
+<section class="service-details">
+  <ng-container
+    class=""
+    *ngIf="
+      (status === 'service' || status === 'destination') && details;
+      else fallback
+    "
+  >
+    <!-- Hero Image -->
+    <div class="hero mb-5 py-5">
+      <img
+        *ngIf="details?.imageUrl"
+        [src]="
+          status === 'service'
+            ? '../../../' + details.imageUrl
+            : details.imageUrl
+        "
+        class="hero-img img-fluid rounded-4 shadow-lg"
+      />
 
+      <div class="hero-content text-center text-white"></div>
+    </div>
+
+    <!-- Details Content -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="service-card shadow-lg rounded-4 p-4">
+            <h1 class="fw-bold">{{ details?.title }}</h1>
+
+            <p class="text-muted fs-5">
+              {{ details?.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #fallback>
+    <h1 class="text-center my-5">تفاصيل {{ status }} رقم {{ offerId }}</h1>
+  </ng-template>
 </section>

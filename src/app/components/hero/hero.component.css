@@ -1,7 +1,26 @@
-section{
-    height: 100vh;
-    background-image: url('https://jubari.net/media/611/socotra-testata-pozzi-1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+section {
+  height: 100vh;
+  background-image: url("../../../assets/socotra-testata-pozzi-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+  color: white;
 }
+
+p {
+  background: rgba(255, 255, 255, 0.2); /* transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 15px;
+  border-radius: 50px;
+}
+
+/* @media (max-width: 768px) {
+  section {
+    background-size: contain;
+  }
+} */

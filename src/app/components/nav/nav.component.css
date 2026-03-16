@@ -1,10 +1,48 @@
-.navbar-brand{
-    border-radius: 13px;
-    -webkit-border-radius: 13px;
-    -moz-border-radius: 13px;
-    -ms-border-radius: 13px;
-    -o-border-radius: 13px;
+.navbar-brand {
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
 }
-.navbar{
-    background-color: rgba(240, 248, 255, 0.649);
+.navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(46, 39, 102, 1) 0%,
+    rgba(108, 222, 255, 1) 100%
+  );
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+  max-width: 150px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+.nav-item {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+.nav-item:hover {
+  color: #ffcc00;
+}
+.navbar-toggler {
+  border: 2px solid white;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
 }
